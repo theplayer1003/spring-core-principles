@@ -1,5 +1,9 @@
-package com.example.springcore.member;
+package com.example.springcore;
 
+import com.example.springcore.member.MemberRepository;
+import com.example.springcore.member.MemberService;
+import com.example.springcore.member.MemberServiceImpl;
+import com.example.springcore.member.MemoryMemberRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

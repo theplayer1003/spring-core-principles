@@ -1,8 +1,10 @@
-package com.example.springcore.member;
+package com.example.springcore;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
+import com.example.springcore.member.Grade;
+import com.example.springcore.member.Member;
+import com.example.springcore.member.MemberService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -13,8 +15,8 @@ class MemberServiceImplTest {
     @BeforeEach
     void beforeEach() {
         final AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
-                AppConfig.class);
-        memberService = applicationContext.getBean("memberService", MemberService.class);
+                AutoAppConfig.class);
+        memberService = applicationContext.getBean(MemberService.class);
     }
 
     @Test
