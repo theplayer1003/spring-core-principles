@@ -5,14 +5,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 class MemberServiceImplTest {
     MemberService memberService;
 
     @BeforeEach
     void beforeEach() {
-        AppConfig appConfig = new AppConfig();
-        memberService = appConfig.memberService();
+        final AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(
+                AppConfig.class);
+        memberService = applicationContext.getBean("memberService", MemberService.class);
     }
 
     @Test

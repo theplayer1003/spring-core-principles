@@ -12,6 +12,8 @@ repositories {
 val assertjversion = "3.27.7";
 
 dependencies {
+    implementation("org.springframework:spring-context:6.1.4")
+
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
 
