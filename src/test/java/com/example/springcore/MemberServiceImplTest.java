@@ -21,6 +21,8 @@ class MemberServiceImplTest {
 
     @Test
     void join() {
+        System.out.println("memberService class = " + memberService.getClass());
+
         long id = 1;
         Member memberA = new Member(id, "memberA", Grade.VIP);
 
