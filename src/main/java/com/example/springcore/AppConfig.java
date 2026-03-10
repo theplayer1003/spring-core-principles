@@ -7,15 +7,15 @@ import com.example.springcore.member.MemoryMemberRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class AppConfig {
 
-    @Bean
+    //@Bean
     public MemberService memberService() {
         return new MemberServiceImpl(memberRepository());
     }
 
-    @Bean
+    //@Bean
     public MemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
